@@ -1,0 +1,127 @@
+/* Media Queries */
+/* Los estilos de cada componente son para el móvil; aquí se cambian para
+   otros tamaños de pantalla. Este archivo se carga el último (main.jsx).
+   Columnas con minmax(0, 1fr): no se ensanchan con las palabras largas. */
+
+/* ===================================================================== */
+/* === MÓVILES PEQUEÑOS (hasta 480px) === */
+/* ===================================================================== */
+@media (max-width: 480px) {
+  .u-sectionTitle {
+    font-size: 2rem;
+  }
+  /* Footer en columna y centrado */
+  .Footer-content {
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+  }
+}
+/* ===================================================================== */
+/* === MÓVILES (hasta 639px) === */
+/* ===================================================================== */
+@media (max-width: 639px) {
+  /* Tarjeta de pedido: el precio de cada pack va en su propia línea */
+  .OrderCard-item {
+    flex-wrap: wrap;
+  }
+  .OrderCard-itemInfo {
+    flex: 1;
+  }
+  .OrderCard-itemTotal {
+    width: 100%;
+    text-align: right;
+  }
+}
+/* ===================================================================== */
+/* === MÓVILES GRANDES (desde 640px) === */
+/* ===================================================================== */
+@media (min-width: 640px) {
+  /* Galerías de Ropa y Murales: 2 columnas */
+  .PhotoGallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  /* Tarjeta de pedido */
+  .OrderCard {
+    padding: 1.5rem;
+  }
+  .OrderCard-item {
+    gap: 1rem;
+  }
+  .OrderCard-itemImage {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+  /* Servicio y cantidad en la misma línea */
+  .OrderCard-itemService,
+  .OrderCard-separator {
+    display: inline;
+  }
+}
+/* ===================================================================== */
+/* === TABLETS (desde 768px) === */
+/* ===================================================================== */
+@media (min-width: 768px) {
+  /* Logo de la portada más grande */
+  .Hero-logo {
+    width: 20rem;
+    height: 20rem;
+  }
+  .ContactInfo-title {
+    font-size: 2.5rem;
+  }
+  /* Servicios y tarjetas de precios: 2 columnas */
+  .Products-grid,
+  .PriceCards-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  /* Diseño gráfico: nombres a la izquierda y la foto a la derecha */
+  .Gallery-layout {
+    grid-template-columns: 14rem 1fr;
+    align-items: start;
+  }
+  /* La foto se queda fija al bajar */
+  .Gallery-main {
+    position: sticky;
+    top: 6rem;
+  }
+}
+/* ===================================================================== */
+/* === MENÚ DE ESCRITORIO (desde 981px) === */
+/* ===================================================================== */
+@media (min-width: 981px) {
+  .Header-desktopNav {
+    display: flex;
+  }
+  /* Se ocultan la hamburguesa y el menú móvil */
+  .Header-mobile,
+  .MobileNav {
+    display: none;
+  }
+}
+/* ===================================================================== */
+/* === LAPTOPS Y DESKTOPS (desde 1024px) === */
+/* ===================================================================== */
+@media (min-width: 1024px) {
+  .Header-desktopNav {
+    gap: 1rem;
+  }
+  /* Servicios, precios y galerías: 3 columnas */
+  .Products-grid,
+  .PriceCards-grid,
+  .PhotoGallery-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  /* Sobre nosotros: foto y texto lado a lado */
+  .AboutUs-content {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+/* ===================================================================== */
+/* === DESKTOPS GRANDES (desde 1280px) === */
+/* ===================================================================== */
+@media (min-width: 1280px) {
+  .u-sectionTitle {
+    font-size: 3rem;
+  }
+}

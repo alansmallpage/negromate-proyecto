@@ -1,0 +1,12 @@
+/* CONTENEDOR PRINCIPAL DE LA APLICACIÓN */
+/* Columna a pantalla completa: el footer queda abajo aunque haya poco contenido */
+.App-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+/* CONTENIDO PRINCIPAL MAIN */
+.App-mainContent {
+  flex-grow: 1;
+  width: 100%;
+}

@@ -1,0 +1,170 @@
+/* Estilos para la página de Shopping Cart (carrito de compras) */
+
+/* ===================================================================== */
+/* === PÁGINA DEL CARRITO === */
+/* ===================================================================== */
+.ShoppingCart {
+  min-height: calc(100vh - 200px);
+}
+/* Título con poco margen para dejar el saludo cerca */
+.ShoppingCart-title {
+  margin-bottom: 1rem;
+}
+/* Saludo "Hola, usuario" */
+.ShoppingCart-greeting {
+  margin-bottom: 2.5rem;
+  text-align: center;
+  font-size: 1.125rem;
+}
+/* ===================================================================== */
+/* === LAYOUT DEL CARRITO === */
+/* ===================================================================== */
+.ShoppingCart-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 2rem;
+}
+/* ===================================================================== */
+/* === CONTENEDOR DE ITEMS === */
+/* ===================================================================== */
+.ShoppingCart-itemsContainer {
+  background-color: var(--dark-bg);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+/* ===================================================================== */
+/* === ITEM DEL CARRITO === */
+/* ===================================================================== */
+.CartItem {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: space-between;
+  border-bottom: 1px solid #4a4a4a;
+  padding-bottom: 1rem;
+}
+/* Último item sin borde inferior */
+.CartItem:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+/* INFORMACIÓN DEL ITEM */
+.CartItem-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+/* Imagen del producto */
+.CartItem-image {
+  width: 5rem;
+  height: 5rem;
+  object-fit: cover;
+  border-radius: 0.25rem;
+}
+/* Nombre del producto */
+.CartItem-name {
+  font-weight: 700;
+  font-size: 1.125rem;
+}
+/* ACCIONES DEL ITEM */
+.CartItem-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+/* Input de cantidad */
+.CartItem-quantity {
+  width: 4rem;
+  text-align: center;
+  background-color: white;
+  color: black;
+  border: 1px solid var(--border-color);
+  border-radius: 0.25rem;
+  padding: 0.25rem;
+}
+/* BOTÓN DE ELIMINAR */
+.CartItem-remove {
+  color: #b91c1c;
+  transition: color 0.2s;
+}
+/* Hover */
+.CartItem-remove:hover {
+  color: #ef4444;
+}
+/* Icono de papelera */
+.CartItem-remove svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+/* ===================================================================== */
+/* === RESUMEN DEL CARRITO === */
+/* ===================================================================== */
+.ShoppingCart-summary {
+  background-color: var(--dark-bg);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  align-self: flex-start;
+  position: sticky;
+  top: 6rem;
+}
+/* Título del resumen */
+.ShoppingCart-summaryTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #4a4a4a;
+  padding-bottom: 1rem;
+}
+/* FILA DEL RESUMEN */
+.ShoppingCart-summaryRow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+/* TOTAL DEL RESUMEN */
+.ShoppingCart-summaryTotal {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  font-size: 1.25rem;
+  border-top: 1px solid #4a4a4a;
+  padding-top: 1rem;
+}
+/* BOTÓN DE REALIZAR PEDIDO */
+.ShoppingCart-summary .Button {
+  width: 100%;
+  margin-top: 1.5rem;
+}
+/* Error al realizar el pedido */
+.ShoppingCart-error {
+  margin-top: 1rem;
+}
+/* ===================================================================== */
+/* === PEDIDO RECIBIDO === */
+/* ===================================================================== */
+.ShoppingCart-successBox {
+  margin: 0 1rem;
+}
+/* Título */
+.ShoppingCart-successTitle {
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+/* Texto */
+.ShoppingCart-successText {
+  max-width: 28rem;
+  margin: 0 auto;
+}
+/* Botones */
+.ShoppingCart-successActions {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}

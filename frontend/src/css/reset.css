@@ -1,0 +1,62 @@
+/* Reset CSS */
+
+/* Todos los elementos: sin márgenes, sin rellenos y sin bordes */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0 solid;
+}
+/* HTML */
+html {
+  line-height: 1.5;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  /* Quita el recuadro azul al tocar en el móvil */
+  -webkit-tap-highlight-color: transparent;
+}
+/* Títulos (el tamaño se pone en el CSS de cada componente) */
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+/* Listas */
+ul, ol {
+  list-style: none;
+}
+/* Enlaces */
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+/* Imágenes e iconos */
+img, svg, video, canvas {
+  display: block;
+  vertical-align: middle;
+}
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+/* Formulario */
+input, button, textarea, select {
+  font: inherit;
+  letter-spacing: inherit;
+  color: inherit;
+  border-radius: 0;
+  background-color: transparent;
+}
+/* Botones */
+button {
+  cursor: pointer;
+}
+/* Líneas separadoras */
+hr {
+  height: 0;
+  color: inherit;
+  border-top-width: 1px;
+}
+/* Negritas (también en el texto que llega de la base de datos) */
+strong, b {
+  font-weight: 700;
+}

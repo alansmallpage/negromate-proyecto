@@ -1,0 +1,23 @@
+/* Profile (iniciar sesión y registrarse) */
+
+/* ===================================================================== */
+/* === PÁGINA DE PERFIL === */
+/* ===================================================================== */
+.Profile {
+  min-height: calc(100vh - 200px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* ===================================================================== */
+/* === CONTENEDOR DEL PERFIL === */
+/* ===================================================================== */
+.Profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* Pestañas Iniciar Sesión / Registrarse (mismo ancho que el formulario) */
+.Profile-toggleButtons {
+  max-width: 28rem;
+}

@@ -1,0 +1,213 @@
+/* Estilos para el componente Header */
+
+/* ===================================================================== */
+/* === CONTENEDOR PRINCIPAL DEL HEADER === */
+/* ===================================================================== */
+.Header {
+  background-color: var(--main-color);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid var(--dark-bg);
+}
+/* Contenido del header */
+.Header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* ===================================================================== */
+/* === LOGO DEL HEADER === */
+/* ===================================================================== */
+.Header-logo img {
+  height: 2rem;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.2s ease-in-out;
+}
+/* Hover */
+.Header-logo:hover img {
+  transform: scale(1.05);
+}
+/* ===================================================================== */
+/* === NAVEGACIÓN DESKTOP (se muestra desde 981px, ver queries.css) === */
+/* ===================================================================== */
+.Header-desktopNav {
+  display: none;
+  align-items: center;
+  gap: 0.25rem;
+}
+/* Enlaces de navegación */
+.NavLink {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: color 0.2s, background-color 0.2s;
+  color: var(--sub-color);
+  font-weight: 700;
+}
+/* Hover */
+.NavLink:hover {
+  background-color: var(--dark-bg);
+  color: var(--contrast-color);
+}
+/* Enlace de la página actual */
+.NavLink--active {
+  background-color: var(--dark-bg);
+  color: var(--contrast-color);
+}
+/* ===================================================================== */
+/* === MENÚS DESPLEGABLES (Servicios y Mi cuenta) === */
+/* ===================================================================== */
+.Dropdown {
+  position: relative;
+}
+/* Enlace "Servicios" con su flecha */
+.Dropdown-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+/* Flecha */
+.Dropdown-chevron {
+  width: 1rem;
+  height: 1rem;
+  transition: transform 0.2s;
+}
+/* Hover: la flecha gira */
+.Dropdown:hover .Dropdown-chevron {
+  transform: rotate(180deg);
+}
+/* El menú está escondido hasta que se pasa el ratón por encima */
+.Dropdown-menu {
+  position: absolute;
+  top: 100%;
+  width: 15rem;
+  /* Hueco transparente para que el menú no se cierre al bajar el ratón */
+  padding-top: 0.5rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s, visibility 0.2s;
+}
+/* Menú de Servicios (hacia la derecha) */
+.Dropdown-menu--left {
+  left: 0;
+}
+/* Menú de Mi cuenta (hacia la izquierda) */
+.Dropdown-menu--right {
+  right: 0;
+}
+/* Se abre al pasar el ratón */
+.Dropdown:hover .Dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+}
+/* Caja del menú */
+.Dropdown-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  background-color: var(--main-color);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+/* Saludo "Hola, usuario" */
+.Dropdown-greeting {
+  padding: 0.5rem 1rem 0.25rem;
+  font-size: 0.875rem;
+}
+/* ===================================================================== */
+/* === BOTÓN DE CERRAR SESIÓN === */
+/* ===================================================================== */
+.LogoutButton {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  text-align: left;
+  color: var(--sub-color);
+  font-weight: 700;
+  transition: background-color 0.2s, color 0.2s;
+}
+/* Hover */
+.LogoutButton:hover {
+  background-color: #ef4444;
+  color: white;
+}
+/* ===================================================================== */
+/* === ICONOS REDONDOS (cuenta y carrito) === */
+/* ===================================================================== */
+.IconLink {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  border-radius: 9999px;
+  color: var(--sub-color);
+}
+/* Hover */
+.IconLink:hover {
+  background-color: var(--dark-bg);
+}
+/* Iconos SVG */
+.Header-icon {
+  width: 1.75rem;
+  height: 1.75rem;
+}
+/* Contador de productos en el carrito */
+.CartLink-count {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 0.375rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: white;
+  background-color: #b91c1c;
+  border-radius: 9999px;
+}
+/* ===================================================================== */
+/* === MENÚ MÓVIL (hasta 980px, ver queries.css) === */
+/* ===================================================================== */
+.Header-mobile {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+/* Botón hamburguesa */
+.MobileMenuButton {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  color: var(--sub-color);
+}
+/* Hover */
+.MobileMenuButton:hover {
+  background-color: var(--dark-bg);
+}
+/* Icono hamburguesa */
+.MobileMenuButton-icon {
+  width: 2rem;
+  height: 2rem;
+}
+/* Menú desplegado */
+.MobileNav {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 0;
+  background-color: var(--main-color);
+  border-bottom: 1px solid var(--dark-bg);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+/* Líneas separadoras del menú móvil */
+.MobileNav-divider {
+  width: 12rem;
+  margin: 0.5rem 0;
+  border-color: var(--border-color);
+}

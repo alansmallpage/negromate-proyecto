@@ -1,0 +1,23 @@
+# Dependencias
+node_modules/
+
+# Compilaciones
+dist/
+build/
+
+# Variables de entorno
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Logs
+logs/
+*.log
+
+# Editor y sistema
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

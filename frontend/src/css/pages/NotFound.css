@@ -1,0 +1,19 @@
+/* Estilos para la página no encontrada (404) */
+
+/* Caja del mensaje */
+.NotFound-box {
+  margin: 0 1rem;
+}
+/* Número 404 */
+.NotFound-code {
+  font-size: 5rem;
+  line-height: 1;
+  font-weight: 700;
+  color: var(--contrast-color);
+}
+/* Título */
+.NotFound-title {
+  margin: 1rem 0;
+  font-size: 1.875rem;
+  font-weight: 700;
+}

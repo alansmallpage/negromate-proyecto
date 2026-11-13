@@ -1,0 +1,192 @@
+### Variables
+@api_url = http://localhost:3000/api
+
+# Copia aquí los tokens que devuelve el login y los ids que quieras probar
+@jwt_token =
+@user_token =
+@user_id =
+@product_id =
+@order_id =
+@message_id =
+
+#//////////////////////////////
+# AUTH ROUTES
+#//////////////////////////////
+
+### Iniciar sesión como ADMIN (renovar token)
+# Cambia la contraseña por la de ADMIN_PASSWORD de tu .env
+POST {{api_url}}/auth/login
+Content-Type: application/json
+
+{
+    "email": "admin@negromate.com",
+    "password": "contraseña-del-admin"
+}
+
+### Registrar un nuevo usuario
+POST {{api_url}}/auth/register
+Content-Type: application/json
+
+{
+    "username": "testuser",
+    "email": "test@example.com",
+    "password": "password123"
+}
+
+### Iniciar sesión como usuario
+POST {{api_url}}/auth/login
+Content-Type: application/json
+
+{
+    "email": "test@example.com",
+    "password": "password123"
+}
+
+### Obtener perfil del usuario autenticado
+GET {{api_url}}/auth/profile
+Authorization: Bearer {{user_token}}
+
+### Usuario normal en una ruta de admin (debe responder 403)
+GET {{api_url}}/users
+Authorization: Bearer {{user_token}}
+
+
+#//////////////////////////////
+# USER ROUTES (Admin)
+#//////////////////////////////
+
+### Obtener todos los usuarios
+GET {{api_url}}/users
+Authorization: Bearer {{jwt_token}}
+
+### Obtener un usuario por ID
+GET {{api_url}}/users/{{user_id}}
+Authorization: Bearer {{jwt_token}}
+
+### Actualizar un usuario (Admin o usuario)
+PUT {{api_url}}/users/{{user_id}}
+Authorization: Bearer {{jwt_token}}
+Content-Type: application/json
+
+{
+    "username": "updatedusername"
+}
+
+### Eliminar un usuario
+DELETE {{api_url}}/users/{{user_id}}
+Authorization: Bearer {{jwt_token}}
+
+
+#//////////////////////////////
+# PRODUCT ROUTES
+#//////////////////////////////
+
+### Obtener todos los productos
+GET {{api_url}}/products
+
+### Obtener productos de la categoría Murals
+GET {{api_url}}/products?category=Murals
+
+### Obtener productos y galería de la categoría Murals
+GET {{api_url}}/products/category/Murals
+
+### Obtener un producto por ID
+GET {{api_url}}/products/{{product_id}}
+
+### Crear un nuevo producto (Admin)
+POST {{api_url}}/products
+Authorization: Bearer {{jwt_token}}
+Content-Type: application/json
+
+{
+    "name": "Nuevo Producto",
+    "category": "GraphicDesign",
+    "price": 99.99,
+    "imageUrl": "https://example.com/image.jpg",
+    "description": "Descripción del producto",
+    "details": ["Detalle 1", "Detalle 2"]
+}
+
+### Actualizar un producto (Admin)
+PUT {{api_url}}/products/{{product_id}}
+Authorization: Bearer {{jwt_token}}
+Content-Type: application/json
+
+{
+    "name": "Producto Actualizado",
+    "price": 149.99,
+    "description": "Nueva descripción"
+}
+
+### Eliminar un producto (Admin)
+DELETE {{api_url}}/products/{{product_id}}
+Authorization: Bearer {{jwt_token}}
+
+
+#//////////////////////////////
+# ORDER ROUTES
+#//////////////////////////////
+
+### Obtener todas las órdenes (Admin)
+GET {{api_url}}/orders
+Authorization: Bearer {{jwt_token}}
+
+### Obtener las órdenes del usuario autenticado
+GET {{api_url}}/orders/myorders
+Authorization: Bearer {{user_token}}
+
+### Obtener una orden por ID
+GET {{api_url}}/orders/{{order_id}}
+Authorization: Bearer {{jwt_token}}
+
+### Crear una nueva orden
+POST {{api_url}}/orders
+Authorization: Bearer {{user_token}}
+Content-Type: application/json
+
+{
+    "orderItems": [
+        {
+            "product": "{{product_id}}",
+            "quantity": 2
+        }
+    ]
+}
+
+### Actualizar el estado de una orden (Admin): pending, completed o cancelled
+PUT {{api_url}}/orders/{{order_id}}
+Authorization: Bearer {{jwt_token}}
+Content-Type: application/json
+
+{
+    "status": "completed"
+}
+
+### Eliminar una orden (Admin)
+DELETE {{api_url}}/orders/{{order_id}}
+Authorization: Bearer {{jwt_token}}
+
+
+#//////////////////////////////
+# MESSAGE ROUTES
+#//////////////////////////////
+
+### Enviar un mensaje de contacto
+POST {{api_url}}/messages
+Content-Type: application/json
+
+{
+    "name": "Cliente de prueba",
+    "email": "cliente@example.com",
+    "phone": "600000000",
+    "clientType": "company",
+    "message": "Me gustaría un mural para mi local."
+}
+
+### Obtener todos los mensajes (Admin)
+GET {{api_url}}/messages
+Authorization: Bearer {{jwt_token}}
+
+### Eliminar un mensaje (Admin)
+DELETE {{api_url}}/messages/{{message_id}}
+Authorization: Bearer {{jwt_token}}

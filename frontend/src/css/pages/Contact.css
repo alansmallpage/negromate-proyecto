@@ -1,0 +1,114 @@
+/* Estilos para la página de Contact */
+
+/* ===================================================================== */
+/* === PÁGINA DE CONTACTO === */
+/* ===================================================================== */
+.Contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 200px);
+}
+/* ===================================================================== */
+/* === ENCABEZADO DEL CONTACTO === */
+/* ===================================================================== */
+.Contact-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+/* Título principal h1 */
+.Contact-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--contrast-color);
+}
+/* Párrafo descriptivo */
+.Contact-subtitle {
+  font-size: 1.125rem;
+}
+/* ===================================================================== */
+/* === FORMULARIO DE CONTACTO (colores invertidos) === */
+/* ===================================================================== */
+.Contact-form {
+  max-width: 42rem;
+  margin: 0 auto;
+  background-color: var(--sub-color);
+  color: var(--dark-bg);
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+  border: 2px solid var(--contrast-color);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+/* ETIQUETAS DEL FORMULARIO */
+.Contact-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+/* INPUTS Y TEXTAREA */
+.Contact-input {
+  margin-top: 0.25rem;
+  display: block;
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  background-color: white;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  color: #1f2937;
+}
+/* Focus */
+.Contact-input:focus {
+  outline: none;
+  border-color: var(--sub-contrast);
+  box-shadow: 0 0 0 2px var(--sub-contrast);
+}
+/* Comentarios: se puede cambiar de tamaño */
+.Contact-textarea {
+  resize: both;
+}
+/* Texto de ejemplo dentro de comentarios */
+.Contact-textarea::placeholder {
+  color: #757575;
+}
+/* TIPO DE CLIENTE */
+.Contact-legend {
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+/* Grupo de opciones */
+.Contact-radioGroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+/* Opción: el círculo al lado del texto */
+.Contact-radioLabel {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+/* Círculo de la opción */
+.Contact-radio {
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+/* ===================================================================== */
+/* === MENSAJE DE ÉXITO === */
+/* ===================================================================== */
+.Contact-successTitle {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: var(--contrast-color);
+  margin-bottom: 1rem;
+}

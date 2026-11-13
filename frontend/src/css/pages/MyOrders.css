@@ -1,0 +1,36 @@
+/* Estilos para la página Mis Pedidos */
+
+/* ===================================================================== */
+/* === PÁGINA DE MIS PEDIDOS === */
+/* ===================================================================== */
+.MyOrders {
+  min-height: calc(100vh - 200px);
+}
+/* Contenido centrado */
+.MyOrders-content {
+  max-width: 56rem;
+  margin: 0 auto;
+}
+/* Título con poco margen para dejar el saludo cerca */
+.MyOrders-title {
+  margin-bottom: 1rem;
+}
+/* Saludo "Hola, usuario" */
+.MyOrders-greeting {
+  margin-bottom: 0.5rem;
+  text-align: center;
+  font-size: 1.125rem;
+}
+/* Aviso del pago */
+.MyOrders-info {
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+/* ===================================================================== */
+/* === LISTA DE PEDIDOS === */
+/* ===================================================================== */
+.MyOrders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}

@@ -1,0 +1,16 @@
+/** -------------------------------------------------------------------
+ * =================================================================
+ * Componente de protección de rutas para usuarios autenticados
+ * =================================================================
+ */
+
+import { Navigate, Outlet } from "react-router-dom";
+import { useAuth } from "@/context/AuthContext";
+
+const ProtectedRoute = () => {
+  const { user } = useAuth();
+  // Si hay un usuario autenticado renderiza Outlet, si no hay usuario redirige a la página de login
+  return user ? <Outlet /> : <Navigate to="/profile" replace />;
+};
+
+export default ProtectedRoute;

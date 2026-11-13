@@ -1,0 +1,62 @@
+/* Estilos para el panel de admin */
+
+/* ===================================================================== */
+/* === PÁGINA DEL PANEL === */
+/* ===================================================================== */
+.AdminPanel {
+  min-height: calc(100vh - 200px);
+}
+/* Contenido centrado */
+.AdminPanel-content {
+  max-width: 56rem;
+  margin: 0 auto;
+}
+/* Mensaje "No hay pedidos / mensajes todavía" */
+.AdminPanel-empty {
+  font-size: 1.25rem;
+}
+/* Número de pedidos de cada estado */
+.AdminPanel-counts {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+/* Lista de pedidos o de mensajes */
+.AdminPanel-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+/* ===================================================================== */
+/* === TARJETA DE UN MENSAJE DE CONTACTO === */
+/* ===================================================================== */
+.MessageCard {
+  background-color: var(--dark-bg);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+}
+/* Nombre, fecha y botón de eliminar */
+.MessageCard-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+/* Nombre de la persona o empresa */
+.MessageCard-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+/* Email y teléfono */
+.MessageCard-contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.5rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.875rem;
+}
+/* Texto del mensaje (respeta los saltos de línea) */
+.MessageCard-text {
+  white-space: pre-line;
+}

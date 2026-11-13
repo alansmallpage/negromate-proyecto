@@ -1,0 +1,71 @@
+/* Estilos para el componente Footer */
+
+/* ===================================================================== */
+/* === CONTENEDOR PRINCIPAL DEL FOOTER === */
+/* ===================================================================== */
+.Footer {
+  background-color: var(--dark-bg);
+  color: var(--sub-color);
+  padding: 1.5rem 0;
+  margin-top: auto;
+}
+/* ===================================================================== */
+/* === LÍNEA DIVISORIA DEL FOOTER === */
+/* ===================================================================== */
+.Footer-divider {
+  border-color: var(--contrast-color);
+  margin-bottom: 1.5rem;
+}
+/* ===================================================================== */
+/* === CONTENIDO DEL FOOTER === */
+/* ===================================================================== */
+.Footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+/* ===================================================================== */
+/* === TEXTO DE COPYRIGHT === */
+/* ===================================================================== */
+.Footer-copyright {
+  font-size: 0.875rem;
+  text-align: center;
+}
+/* ===================================================================== */
+/* === ENLACES DEL FOOTER === */
+/* ===================================================================== */
+.Footer-links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+/* Enlaces de Instagram y Behance */
+.Footer-links a {
+  transition: color 0.2s;
+}
+/* Hover */
+.Footer-links a:hover {
+  color: var(--contrast-color);
+}
+/* ===================================================================== */
+/* === BOTÓN DE CAMBIO DE TEMA === */
+/* ===================================================================== */
+.ThemeToggleButton {
+  border: 1px solid var(--contrast-color);
+  color: var(--contrast-color);
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-family: "Spartan", sans-serif;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+}
+/* Hover: rojo */
+.ThemeToggleButton:hover {
+  border-color: #b91c1c;
+  background-color: var(--main-color);
+  color: #b91c1c;
+}

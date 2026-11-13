@@ -1,0 +1,90 @@
+/* Estilos para la sección de paquetes y las tarjetas de precio */
+
+/* ===================================================================== */
+/* === SECCIÓN DE TARJETAS DE PRECIOS === */
+/* ===================================================================== */
+.PriceCard-section {
+  background-color: var(--dark-bg);
+}
+/* GRID DE TARJETAS DE PRECIOS (1 columna en móvil, ver queries.css) */
+/* minmax(0, 1fr) en vez de 1fr: así la columna no se hace más ancha que la
+   pantalla cuando hay una palabra larga (con 1fr la tarjeta se salía en móvil) */
+.PriceCards-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 2rem;
+  max-width: 72rem;
+  margin: 0 auto;
+}
+/* Botón "Explorar servicios" debajo de las tarjetas */
+.PriceCards-actions {
+  margin-top: 3rem;
+  text-align: center;
+}
+/* ===================================================================== */
+/* === TARJETA DE PRECIO === */
+/* ===================================================================== */
+.PriceCard {
+  background-color: var(--main-color);
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  border: 2px solid var(--contrast-color);
+}
+/* NOMBRE DEL PAQUETE */
+.PriceCard-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--contrast-color);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+/* DESCRIPCIÓN DEL PAQUETE */
+.PriceCard-description {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--sub-contrast);
+}
+/* PRECIO */
+.PriceCard-price {
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--contrast-color);
+}
+/* LISTA DE DETALLES (ocupa el espacio libre para que el botón quede abajo) */
+.PriceCard-details {
+  margin-bottom: 2rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+/* Cada item de la lista de detalles */
+.PriceCard-details li {
+  display: flex;
+  align-items: flex-start;
+}
+/* Icono check */
+.PriceCard-details svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: var(--contrast-color);
+  margin-right: 0.5rem;
+  flex-shrink: 0;
+  margin-top: 0.25rem;
+}
+/* BOTÓN DE AGREGAR AL CARRITO */
+.PriceCard .Button {
+  margin-top: auto;
+  width: 100%;
+}
+/* Enlace "Ver carrito" de la notificación */
+.ToastLink {
+  font-weight: 700;
+  white-space: nowrap;
+  text-decoration: underline;
+}
