@@ -16,7 +16,7 @@ API REST de la web de Negromate, hecha con **Node.js**, **Express** y **MongoDB*
 npm install
 cp .env.example .env    # en Windows: copy .env.example .env
 # Rellena el .env (ver la tabla de abajo)
-npm run create-admin    # crea el usuario admin@negromate.com
+npm run create-admin    # crea un admin en tu base de datos
 npm run dev
 ```
 

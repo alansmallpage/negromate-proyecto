@@ -4,7 +4,7 @@ Web de **Negromate**, un estudio creativo de Madrid que hace diseño gráfico, r
 
 Es un proyecto full stack: una web en **React** con galerías de trabajos, carrito de compras, registro de usuarios y panel de administración, conectada a una **API REST** propia hecha con **Node.js, Express y MongoDB**.
 
-<!-- **[Ver la demo](https://...)** -->
+**[Ver la demo](https://negromate.vercel.app)**
 
 ![Sección de servicios de la portada](screenshots/servicios.webp)
 
@@ -58,7 +58,7 @@ Necesitas **Node.js 20** o superior y una base de datos en [MongoDB Atlas](https
 cd backend
 npm install
 cp .env.example .env    # en Windows: copy .env.example .env
-npm run create-admin    # crea el usuario administrador
+npm run create-admin    # crea un admin en tu base de datos
 npm run dev             # API en http://localhost:3000
 ```
 
