@@ -16,6 +16,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  /* Espacio mínimo para que el carrito no quede pegado al logo en el móvil */
+  gap: 1rem;
 }
 /* ===================================================================== */
 /* === LOGO DEL HEADER === */
@@ -173,7 +175,8 @@
 .Header-mobile {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  /* Compensa el padding del botón para que la hamburguesa quede alineada con el borde, como el logo */
+  margin-right: -0.5rem;
 }
 /* Botón hamburguesa */
 .MobileMenuButton {
