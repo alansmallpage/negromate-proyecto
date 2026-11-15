@@ -9,8 +9,11 @@ import React, { createContext, useState, useEffect, useContext } from "react";
 const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
+  // Primero el tema guardado; si no hay, el del móvil u ordenador (claro u oscuro)
   const [theme, setTheme] = useState(
-    () => localStorage.getItem("theme") || "light"
+    () =>
+      localStorage.getItem("theme") ||
+      (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light")
   );
 
   useEffect(() => {

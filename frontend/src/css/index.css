@@ -18,13 +18,14 @@ body.dark-theme {
   --main-color: #1a1b1f;
   --dark-bg: #111215;
   --sub-color: #e3e3e3;
-  --contrast-color: #dfff00;
-  --sub-contrast: #c8e600;
+  /* Amarillo del logo */
+  --contrast-color: #e8f772;
+  --sub-contrast: #d1de67;
   --border-color: #4b5563;
   --error-bg: #3b2424;
   --error-text: #fca5a5;
   /* Círculo del logo de la portada: amarillo */
-  --hero-ring-color: #dfff00;
+  --hero-ring-color: #e8f772;
 }
 /* BODY */
 body {
